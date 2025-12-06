@@ -1,4 +1,4 @@
-# comfyui-yumiBase
+# Comfyui-Yumi-Comics
 
 #### 介绍
 comfyui 基础节点，专门用于漫画生成工作流
