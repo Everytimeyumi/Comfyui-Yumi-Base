@@ -1,7 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-yumi_comics.egg-info/PKG-INFO
-yumi_comics.egg-info/SOURCES.txt
-yumi_comics.egg-info/dependency_links.txt
-yumi_comics.egg-info/top_level.txt
