@@ -18,6 +18,8 @@ from .script_panel_processor import (
     BatchPanelImageGenerator,
     TextDisplayNode,
     PanelImageComposer,
+    LongCatImageEditNode,
+    LongCatImageBatchEditNode,
 )
 
 # 节点映射
@@ -31,6 +33,8 @@ NODE_CLASS_MAPPINGS = {
     "BatchPanelImageGenerator": BatchPanelImageGenerator,
     "TextDisplayNode": TextDisplayNode,
     "PanelImageComposer": PanelImageComposer,
+    "LongCatImageEditNode": LongCatImageEditNode,
+    "LongCatImageBatchEditNode": LongCatImageBatchEditNode,
 }
 
 # 如果旧节点存在，添加到映射中
@@ -56,6 +60,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "BatchPanelImageGenerator": "批量图像生成器",
     "TextDisplayNode": "文本显示器",
     "PanelImageComposer": "分镜图片合成器",
+    "LongCatImageEditNode": "LongCat图像编辑节点",
+    "LongCatImageBatchEditNode": "LongCat批量图像编辑节点",
 }
 
 # 如果旧节点存在，添加到映射中
