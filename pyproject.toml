@@ -28,7 +28,7 @@ Documentation = "https://github.com/Everytimeyumi/Comfyui-Yumi-Comics/wiki"
 "Bug Tracker" = "https://github.com/Everytimeyumi/Comfyui-Yumi-Comics/issues"
 
 [tool.comfy]
-PublisherId = "fcf8662d-adbe-4c87-91c9-a66e9686d82a"
+PublisherId = "yumi"
 DisplayName = "Comfyui-Yumi-Comics"
 Icon = ""
 includes = [] 
