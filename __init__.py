@@ -20,6 +20,9 @@ from .script_panel_processor import (
     PanelImageComposer,
 )
 
+# 导入ResizeImagesToPixelCount节点
+from .resize_to_pixel_count import ResizeImagesToPixelCount
+
 # 节点映射
 NODE_CLASS_MAPPINGS = {
     # 新节点
@@ -31,6 +34,8 @@ NODE_CLASS_MAPPINGS = {
     "BatchPanelImageGenerator": BatchPanelImageGenerator,
     "TextDisplayNode": TextDisplayNode,
     "PanelImageComposer": PanelImageComposer,
+    # ResizeImagesToPixelCount节点
+    "ResizeImagesToPixelCount": ResizeImagesToPixelCount,
 }
 
 # 如果旧节点存在，添加到映射中
@@ -56,6 +61,8 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "BatchPanelImageGenerator": "批量图像生成器",
     "TextDisplayNode": "文本显示器",
     "PanelImageComposer": "分镜图片合成器",
+    # ResizeImagesToPixelCount节点显示名称
+    "ResizeImagesToPixelCount": "按像素数调整图像大小",
 }
 
 # 如果旧节点存在，添加到映射中
