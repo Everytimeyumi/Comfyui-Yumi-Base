@@ -1,3 +1,5 @@
+# 文件: d:\xgwork\Comfyui-Yumi-Comics\__init__.py
+
 # 原有节点导入（如果存在）
 try:
     from .comic_nodes import ScriptToPanels, PanelList
@@ -23,6 +25,9 @@ from .script_panel_processor import (
 # 导入ResizeImagesToPixelCount节点
 from .resize_to_pixel_count import ResizeImagesToPixelCount
 
+# 导入LongCat-Image节点
+from .longcat_image_node import LongCatImageLoader, LongCatImageGenerator
+
 # 节点映射
 NODE_CLASS_MAPPINGS = {
     # 新节点
@@ -36,6 +41,9 @@ NODE_CLASS_MAPPINGS = {
     "PanelImageComposer": PanelImageComposer,
     # ResizeImagesToPixelCount节点
     "ResizeImagesToPixelCount": ResizeImagesToPixelCount,
+    # LongCat-Image节点
+    "LongCatImageLoader": LongCatImageLoader,
+    "LongCatImageGenerator": LongCatImageGenerator,
 }
 
 # 如果旧节点存在，添加到映射中
@@ -63,6 +71,9 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "PanelImageComposer": "分镜图片合成器",
     # ResizeImagesToPixelCount节点显示名称
     "ResizeImagesToPixelCount": "按像素数调整图像大小",
+    # LongCat-Image节点显示名称
+    "LongCatImageLoader": "加载LongCat-Image模型",
+    "LongCatImageGenerator": "LongCat-Image图像生成器",
 }
 
 # 如果旧节点存在，添加到映射中
