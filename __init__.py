@@ -1,14 +1,4 @@
-# 文件: d:\xgwork\Comfyui-Yumi-Comics\__init__.py
 
-# 原有节点导入（如果存在）
-try:
-    from .comic_nodes import ScriptToPanels, PanelList
-    from .panel_iterator import PanelIterator
-    from .comic_generator import ScriptToPanelsNode, PanelIteratorNode, ComicImageAssemblerNode
-    from .comic_auto_generator import AutoComicGeneratorNode
-    HAS_OLD_NODES = True
-except ImportError:
-    HAS_OLD_NODES = False
 
 # 新节点导入
 from .script_panel_processor import (
@@ -22,8 +12,7 @@ from .script_panel_processor import (
     PanelImageComposer,
 )
 
-# 导入ResizeImagesToPixelCount节点
-from .resize_to_pixel_count import ResizeImagesToPixelCount
+
 
 # 导入LongCat-Image节点
 from .longcat_image_node import LongCatImageLoader, LongCatImageGenerator
@@ -40,23 +29,13 @@ NODE_CLASS_MAPPINGS = {
     "TextDisplayNode": TextDisplayNode,
     "PanelImageComposer": PanelImageComposer,
     # ResizeImagesToPixelCount节点
-    "ResizeImagesToPixelCount": ResizeImagesToPixelCount,
+
     # LongCat-Image节点
     "LongCatImageLoader": LongCatImageLoader,
     "LongCatImageGenerator": LongCatImageGenerator,
 }
 
-# 如果旧节点存在，添加到映射中
-if HAS_OLD_NODES:
-    NODE_CLASS_MAPPINGS.update({
-        "ScriptToPanels": ScriptToPanels,
-        "PanelIterator": PanelIterator,
-        "PanelList": PanelList,
-        "ScriptToPanelsNode": ScriptToPanelsNode,
-        "PanelIteratorNode": PanelIteratorNode,
-        "ComicImageAssembler": ComicImageAssemblerNode,
-        "AutoComicGenerator": AutoComicGeneratorNode,
-    })
+
 
 # 显示名称映射
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -76,16 +55,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "LongCatImageGenerator": "LongCat-Image图像生成器",
 }
 
-# 如果旧节点存在，添加到映射中
-if HAS_OLD_NODES:
-    NODE_DISPLAY_NAME_MAPPINGS.update({
-        "ScriptToPanels": "剧本转分镜 (Script to Panels)",
-        "PanelIterator": "分镜迭代器 (Panel Iterator)",
-        "PanelList": "分镜列表 (Panel List)",
-        "ScriptToPanelsNode": "剧本转分镜Pro",
-        "PanelIteratorNode": "分镜迭代器Pro",
-        "ComicImageAssembler": "漫画图像组装器",
-        "AutoComicGenerator": "自动漫画生成器",
-    })
+
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
